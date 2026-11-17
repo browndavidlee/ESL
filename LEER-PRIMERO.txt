@@ -1,0 +1,6 @@
+1. Unzip on your Desktop. You get: baa-class\ (icons + manifest) and Build-ClassFolder.ps1
+2. Make sure democlass1-student.html is on your Desktop (with your real teacher name and city).
+3. Right-click Build-ClassFolder.ps1 > Run with PowerShell.
+   It adds index.html to baa-class\ with the iPhone home-screen tags.
+4. Drag the baa-class folder onto https://app.netlify.com/drop and send the link by WhatsApp.
+Do NOT upload Make-StudentDemo.ps1 or democlass1.html (they hold your Pexels key).
