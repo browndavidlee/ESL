@@ -7,8 +7,8 @@
 <meta name="color-scheme" content="light">
 <meta name="format-detection" content="telephone=no">
 <meta name="robots" content="noindex">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f213d'/%3E%3Ctext x='32' y='41' font-family='Arial' font-size='24' font-weight='700' text-anchor='middle' fill='%23fff'%3EBAA%3C/text%3E%3C/svg%3E">
-<title>Brown American Academy — Real Talk: Habits, Hot Takes &amp; Guessing Games</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f213d'/%3E%3Ctext x='32' y='41' font-family='Arial' font-size='22' font-weight='700' text-anchor='middle' fill='%23fff'%3EENG%3C/text%3E%3C/svg%3E">
+<title>Real Talk: Habits, Hot Takes &amp; Guessing Games</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
@@ -240,10 +240,10 @@ footer a{color:var(--navy);font-weight:700}
 <header class="top">
   <div class="top-in">
     <div class="brand">
-      <div class="logo">BAA</div>
+      <div class="logo">ENG</div>
       <div>
-        <b>Brown American Academy</b>
-        <small id="stepSub">1. Hot Takes • Santa Bárbara, Honduras</small>
+        <b>English Conversation Lab</b>
+        <small id="stepSub">1. Hot Takes • Interactive Lesson</small>
       </div>
     </div>
     <button type="button" class="gear" id="gearBtn" data-act="gear" aria-expanded="false" aria-controls="controls">Level 2 ▾</button>
@@ -278,11 +278,11 @@ footer a{color:var(--navy);font-weight:700}
 (function(){
 'use strict';
 
-var KEY = 'baa_l1_postdemo_sb_v2';
-var PEXELS_CACHE_KEY = 'baa_pexels_cache_v1';
+var KEY = 'eng_l1_lesson_v2';
+var PEXELS_CACHE_KEY = 'eng_pexels_cache_v1';
 var CONFIG = {
-  teacher:'Ms. Elena',
-  place:'Santa Bárbara, Honduras',
+  teacher:'your teacher',
+  place:'Interactive Lesson',
   stateTtlMs: 12*60*60*1000,
   pexelsKey:'aRt9wdxpc76Ermz7SgTz6Elm6okhs12NLX2lIYptDtGbkv9S1y37Zxag',
   pexelsTtlMs: 7*24*60*60*1000
@@ -315,12 +315,12 @@ var PEXELS_QUERIES = {
   anime:'watching anime laptop screen',
   pop:'headphones listening pop music',
   soccer:'soccer ball green grass field',
-  baleadas:'tortilla beans cheese taco food',
+  tacos:'tortilla beans cheese taco food',
   pet:'cute puppy dog pet',
   study:'student studying book desk',
   tired:'sleepy person tired couch',
   hungry:'delicious food plate lunch',
-  honduras:'honduras tropical green mountains',
+  hometown:'modern city skyline green park',
   drawing:'paintbrush colorful sketchbook art',
   owl:'cute owl night moon',
   spiders:'spider web macro nature',
@@ -350,11 +350,11 @@ var HOT_TAKES = [
 ];
 
 var CHAT_LINES = [
-  {who:'l', name:'Valeria', line:'Hey! Are you tired today?', say:'Hey! Are you tired today?'},
-  {who:'r', name:'Daniela', line:"No, I'm not! I'm excited for the weekend. Do you watch anime?", say:"No, I'm not! I'm excited for the weekend. Do you watch anime?"},
-  {who:'l', name:'Valeria', line:"I don't watch anime, but I love movies. My sister watches anime every day!", say:"I don't watch anime, but I love movies. My sister watches anime every day!"},
-  {who:'r', name:'Daniela', line:'Cool! Does she listen to pop music too?', say:'Cool! Does she listen to pop music too?'},
-  {who:'l', name:'Valeria', line:"No, she doesn't. She listens to rock because it's energetic!", say:"No, she doesn't. She listens to rock because it's energetic!"}
+  {who:'l', name:'Speaker A', line:'Hey! Are you tired today?', say:'Hey! Are you tired today?'},
+  {who:'r', name:'Speaker B', line:"No, I'm not! I'm excited for the weekend. Do you watch anime?", say:"No, I'm not! I'm excited for the weekend. Do you watch anime?"},
+  {who:'l', name:'Speaker A', line:"I don't watch anime, but I love movies. My sister watches anime every day!", say:"I don't watch anime, but I love movies. My sister watches anime every day!"},
+  {who:'r', name:'Speaker B', line:'Cool! Does she listen to pop music too?', say:'Cool! Does she listen to pop music too?'},
+  {who:'l', name:'Speaker A', line:"No, she doesn't. She listens to rock because it's energetic!", say:"No, she doesn't. She listens to rock because it's energetic!"}
 ];
 
 var DISCOVERY = [
@@ -394,8 +394,8 @@ var TRACK_DO_VERBS = [
    wh:{'What':'What {aux} {s} listen to?','Why':'Why {aux} {s} listen to pop music?','When':'When {aux} {s} listen to pop music?','Where':'Where {aux} {s} listen to pop music?','How often':'How often {aux} {s} listen to pop music?'}},
   {id:'soccer', phrase:'play soccer', v1:'play', v3:'plays', obj:'soccer', oc:'n', beat:'play SAH-ker', tip:'clean /k/ sound in soccer',
    wh:{'What':'What {aux} {s} play?','Why':'Why {aux} {s} play soccer?','When':'When {aux} {s} play soccer?','Where':'Where {aux} {s} play soccer?','How often':'How often {aux} {s} play soccer?'}},
-  {id:'baleadas', phrase:'eat baleadas', v1:'eat', v3:'eats', obj:'baleadas', oc:'n', beat:'eet ba-le-A-das', tip:'long /iː/ in "eat"',
-   wh:{'What':'What {aux} {s} eat?','Why':'Why {aux} {s} eat baleadas?','When':'When {aux} {s} eat baleadas?','Where':'Where {aux} {s} eat baleadas?','How often':'How often {aux} {s} eat baleadas?'}},
+  {id:'tacos', phrase:'eat tacos', v1:'eat', v3:'eats', obj:'tacos', oc:'n', beat:'eet TAH-koz', tip:'long /iː/ in "eat"',
+   wh:{'What':'What {aux} {s} eat?','Why':'Why {aux} {s} eat tacos?','When':'When {aux} {s} eat tacos?','Where':'Where {aux} {s} eat tacos?','How often':'How often {aux} {s} eat tacos?'}},
   {id:'coffee', phrase:'drink coffee', v1:'drink', v3:'drinks', obj:'coffee', oc:'n', beat:'drink KAW-fee', tip:'round /ɔː/ in coffee',
    wh:{'What':'What {aux} {s} drink?','Why':'Why {aux} {s} drink coffee?','When':'When {aux} {s} drink coffee?','Where':'Where {aux} {s} drink coffee?','How often':'How often {aux} {s} drink coffee?'}},
   {id:'pet', phrase:'have a pet', v1:'have', v3:'has', obj:'a pet', oc:'n', beat:'have / has (soft v / z)', tip:'"she has" uses a soft /z/ sound',
@@ -409,7 +409,7 @@ var TRACK_DO_VERBS = [
 var TRACK_BE_STATES = [
   {id:'tired', phrase:'tired today', st:'tired today', beat:'TY-erd (2 beats)', tip:'long "I" sound in tired', wh:{'Why':'Why {be} {s} tired today?','How often':'How often {be} {s} tired?'}},
   {id:'hungry', phrase:'hungry right now', st:'hungry right now', beat:'HUNG-gree', tip:'soft breath /h/, not Spanish /j/', wh:{'Why':'Why {be} {s} hungry right now?'}},
-  {id:'honduras', phrase:'from Santa Bárbara', st:'from Santa Bárbara', beat:'from San-ta BAR-ba-ra', tip:'say "from" with lips closed on /m/', wh:{'Where':'Where {be} {s} from?'}},
+  {id:'hometown', phrase:'from a big city', st:'from a big city', beat:'from a BIG CIT-y', tip:'say "from" with lips closed on /m/', wh:{'Where':'Where {be} {s} from?'}},
   {id:'drawing', phrase:'good at drawing', st:'good at drawing', beat:'good at DRAW-ing', tip:'link "good_at" cleanly', wh:{'What':'What {be} {s} good at?','Why':'Why {be} {s} good at drawing?'}},
   {id:'owl', phrase:'a night owl', st:'a night owl', beat:'a NITE owl', tip:'"night" rhymes with "white"', wh:{'Why':'Why {be} {s} a night owl?'}},
   {id:'spiders', phrase:'scared of spiders', st:'scared of spiders', beat:'SKAIRD of SPY-derz', tip:'start with /s/, NO "e-scared"!', wh:{'What':'What {be} {s} scared of?','Why':'Why {be} {s} scared of spiders?'}}
@@ -437,7 +437,7 @@ var BUGS = [
   {bad:['Does','she','likes','basketball?'], bugIdx:2, choices:['like','likes','liking'], ans:'like', rule:'Magnet Rule: "Does" already has the -s, so use base "like"!'},
   {bad:['I like dogs','because','are','cute.'], bugIdx:2, choices:['they are','is','are they'], ans:'they are', rule:'Never drop the subject! Dogs = they -> "because they are cute."'},
   {bad:['She','have','two','cats.'], bugIdx:1, choices:['has','haves','is have'], ans:'has', rule:'Irregular 3rd person: She has (not haves).'},
-  {bad:['Do','your parents','from','Santa Bárbara?'], bugIdx:0, choices:['Are','Is','Does'], ans:'Are', rule:'"From Santa Bárbara" is a place/origin (no action verb) -> Are your parents from...!'}
+  {bad:['Do','your parents','from','this city?'], bugIdx:0, choices:['Are','Is','Does'], ans:'Are', rule:'"From this city" is a place/origin (no action verb) -> Are your parents from...!'}
 ];
 
 var BUG_HINTS = [
@@ -446,7 +446,7 @@ var BUG_HINTS = [
   '"Does" already carries the -s. Keep the main verb simple.',
   'Say the subject: dogs = ?',
   'She/he + have -> a special form.',
-  'Is "from Santa Bárbara" an action? "Your parents" = more than one.'
+  'Is "from this city" an action? "Your parents" = more than one.'
 ];
 
 var FLIPS = [
@@ -459,12 +459,12 @@ var FLIPS = [
 ];
 
 var MYSTERY_CARDS = [
-  {id:'baleadas', name:'Baleadas', cat:'Food', alts:['baleadas','baleada'], clues:['Is it food? Yes, it is!','Is it from Honduras? Yes, it is!','Does it have beans and cheese? Yes, it does!','Do you eat it with a spoon? No, you don\'t!']},
-  {id:'shakira', name:'Shakira', cat:'Person / Singer', alts:['shakira'], clues:['Is she a singer? Yes, she is!','Does she speak Spanish and English? Yes, she does!','Is she from Honduras? No, she isn\'t (Colombia).','Does she dance and sing pop? Yes, she does!']},
-  {id:'sloth', name:'A Sloth', cat:'Animal', alts:['sloth','a sloth'], clues:['Is it an animal? Yes, it is!','Does it live in Central America? Yes, it does!','Does it run fast? No, it doesn\'t!','Does it sleep in trees? Yes, it does!']},
+  {id:'tacos', name:'Tacos', cat:'Food', alts:['tacos','taco'], clues:['Is it food? Yes, it is!','Is it a popular street food? Yes, it is!','Does it have beans, meat, or cheese? Yes, it does!','Do you eat it with a spoon? No, you don\'t!']},
+  {id:'shakira', name:'Shakira', cat:'Person / Singer', alts:['shakira'], clues:['Is she a singer? Yes, she is!','Does she speak Spanish and English? Yes, she does!','Is she from the USA? No, she isn\'t!','Does she dance and sing pop? Yes, she does!']},
+  {id:'sloth', name:'A Sloth', cat:'Animal', alts:['sloth','a sloth'], clues:['Is it an animal? Yes, it is!','Does it live in the rainforest? Yes, it does!','Does it run fast? No, it doesn\'t!','Does it sleep in trees? Yes, it does!']},
   {id:'minecraft', name:'Minecraft', cat:'Video Game', alts:['minecraft'], clues:['Is it a video game? Yes, it is!','Does it have blocks and creepers? Yes, it does!','Do you play soccer in it? No, you don\'t!','Do people build houses in it? Yes, they do!']},
   {id:'cat', name:'A Cat', cat:'Animal', alts:['cat','a cat'], clues:['Is it a pet? Yes, it is!','Does it bark? No, it doesn\'t!','Does it sleep a lot? Yes, it does!','Does it drink milk or eat fish? Yes, it does!']},
-  {id:'coffee', name:'Honduran Coffee', cat:'Drink', alts:['coffee','honduran coffee'], clues:['Is it a drink? Yes, it is!','Is Santa Bárbara famous for it? Yes, it is!','Do kids usually drink it at night? No, they don\'t!','Is it hot and brown? Yes, it is!']}
+  {id:'coffee', name:'Hot Coffee', cat:'Drink', alts:['coffee','hot coffee'], clues:['Is it a drink? Yes, it is!','Do many people drink it in the morning? Yes, they do!','Do kids usually drink it at night? No, they don\'t!','Is it hot and brown? Yes, it is!']}
 ];
 
 var PODCAST_THEMES = [
@@ -477,7 +477,7 @@ var PODCAST_THEMES = [
     {w:'stay up late', ico:'owl'},{w:'study English', ico:'study'},{w:'favorite subject', ico:'drawing'},{w:'sleep in', ico:'sloth'}
   ]},
   {title:'Food, Snacks & Habits', kw:[
-    {w:'baleadas', ico:'baleadas'},{w:'pineapple on pizza', ico:'pineapple'},{w:'coffee', ico:'coffee'},{w:'spicy snacks', ico:'snacks'},
+    {w:'tacos', ico:'tacos'},{w:'pineapple on pizza', ico:'pineapple'},{w:'coffee', ico:'coffee'},{w:'spicy snacks', ico:'snacks'},
     {w:'chocolate', ico:'chocolate'},{w:'cook at home', ico:'cook'},{w:'sweet vs salty', ico:'hungry'},{w:'drink water', ico:'water'}
   ]}
 ];
@@ -485,7 +485,7 @@ var PODCAST_THEMES = [
 var VOCAB_BANK = [
   {id:'anime', w:'watch anime', beat:'WATCH an-i-me', es:'ver anime'},
   {id:'pop', w:'listen to pop', beat:'LIS-ten (t silent)', es:'escuchar pop'},
-  {id:'baleadas', w:'eat baleadas', beat:'eet ba-le-A-das', es:'comer baleadas'},
+  {id:'tacos', w:'eat tacos', beat:'eet TAH-koz', es:'comer tacos'},
   {id:'wake6', w:'wake up early', beat:'wake_UP ER-ly', es:'despertar temprano'},
   {id:'study', w:'study English', beat:'STUH-dy ING-lish', es:'estudiar inglés'},
   {id:'tired', w:'tired today', beat:'TY-erd (2 beats)', es:'cansada hoy'},
@@ -517,7 +517,7 @@ function freshState(){
     sortAns:{}, vocabDone:[], pronDone:[],
     bugs:{}, flipIdx:0, flipRevealed:false,
     mysCard:0, mysHidden:true, mysQCount:0, mysLog:[], mysQ:'', mysFade:false,
-    mysRound:1, mysUsed:['baleadas'], mysGuess:'', mysResult:'',
+    mysRound:1, mysUsed:['tacos'], mysGuess:'', mysResult:'',
     podTopic:0, podStage:'prep', podTurn:1, podQ1:[], podQ2:[], podNotes1:'', podNotes2:'', podVerify1:'', podVerify2:'',
     timerLeft:TIMER_LEN, timerEnd:0, timerRun:false,
     stars:['',''],
@@ -763,7 +763,7 @@ function svgArt(id){
     wake6:'<svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="44" r="24" fill="#eff6ff" stroke="#1d4ed8" stroke-width="4"/><path d="M40 44V30M40 44l10 6" stroke="#b93626" stroke-width="4" stroke-linecap="round"/><path d="M18 22l8-6M62 22l-8-6" stroke="#1d4ed8" stroke-width="5" stroke-linecap="round"/><text x="40" y="77" text-anchor="middle" font-size="11" font-weight="800" fill="#0f213d">6:00 AM</text></svg>',
     pineapple:'<svg viewBox="0 0 80 80" aria-hidden="true"><path d="M16 64L40 16l24 48z" fill="#fbbf24" stroke="#b45309" stroke-width="3"/><path d="M14 62q26 8 52 0" stroke="#d97706" stroke-width="7" stroke-linecap="round" fill="none"/><circle cx="38" cy="40" r="4" fill="#b93626"/><circle cx="46" cy="52" r="4" fill="#b93626"/><polygon points="33,50 38,44 42,52" fill="#facc15" stroke="#047857" stroke-width="2"/><polygon points="44,36 49,31 51,39" fill="#facc15" stroke="#047857" stroke-width="2"/></svg>',
     horror:'<svg viewBox="0 0 80 80" aria-hidden="true"><rect x="12" y="20" width="56" height="44" rx="8" fill="#0f213d"/><path d="M28 50c0-14 24-14 24 0v6l-4-3-4 3-4-3-4 3-4-3-4 3z" fill="#fff"/><circle cx="35" cy="42" r="3" fill="#0f213d"/><circle cx="45" cy="42" r="3" fill="#0f213d"/><path d="M22 14l8 6M58 14l-8 6" stroke="#b93626" stroke-width="4" stroke-linecap="round"/></svg>',
-    baleadas:'<svg viewBox="0 0 80 80" aria-hidden="true"><path d="M14 52a26 26 0 0 1 52 0z" fill="#fde68a" stroke="#b45309" stroke-width="3"/><path d="M20 52a20 20 0 0 1 40 0" fill="#78350f"/><path d="M24 48h32" stroke="#fff" stroke-width="4" stroke-dasharray="6 4" stroke-linecap="round"/></svg>',
+    tacos:'<svg viewBox="0 0 80 80" aria-hidden="true"><path d="M14 52a26 26 0 0 1 52 0z" fill="#fde68a" stroke="#b45309" stroke-width="3"/><path d="M20 52a20 20 0 0 1 40 0" fill="#78350f"/><path d="M24 48h32" stroke="#fff" stroke-width="4" stroke-dasharray="6 4" stroke-linecap="round"/></svg>',
     shakira:'<svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="30" r="14" fill="#f59e0b"/><path d="M20 66c4-14 36-14 40 0" fill="#6d28d9"/><rect x="52" y="20" width="8" height="16" rx="4" fill="#0f213d"/><path d="M56 36v14" stroke="#0f213d" stroke-width="3"/></svg>',
     sloth:'<svg viewBox="0 0 80 80" aria-hidden="true"><path d="M10 24h60" stroke="#78350f" stroke-width="7" stroke-linecap="round"/><circle cx="40" cy="44" r="18" fill="#a8a29e"/><ellipse cx="40" cy="44" rx="12" ry="10" fill="#fef3c7"/><circle cx="35" cy="42" r="2.5" fill="#0f213d"/><circle cx="45" cy="42" r="2.5" fill="#0f213d"/><path d="M36 48q4 3 8 0" stroke="#0f213d" stroke-width="2" fill="none"/></svg>',
     minecraft:'<svg viewBox="0 0 80 80" aria-hidden="true"><rect x="16" y="16" width="48" height="48" rx="6" fill="#16a34a" stroke="#14532d" stroke-width="3"/><rect x="24" y="28" width="10" height="10" fill="#0f213d"/><rect x="46" y="28" width="10" height="10" fill="#0f213d"/><path d="M34 40h12v14h-4v-6h-4v6h-4z" fill="#0f213d"/></svg>',
@@ -775,7 +775,7 @@ function svgArt(id){
     study:'<svg viewBox="0 0 80 80" aria-hidden="true"><path d="M12 24q14-6 28 2 14-8 28-2v34q-14-6-28 2-14-8-28-2z" fill="#fff" stroke="#1d4ed8" stroke-width="4"/><path d="M40 26v34" stroke="#1d4ed8" stroke-width="3"/><text x="26" y="46" font-size="14" font-weight="800" text-anchor="middle" fill="#b93626">A</text><text x="54" y="46" font-size="14" font-weight="800" text-anchor="middle" fill="#047857">B</text></svg>',
     tired:'<svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="24" fill="#dbeafe" stroke="#1d4ed8" stroke-width="3"/><path d="M29 36q4 4 8 0M43 36q4 4 8 0" stroke="#0f213d" stroke-width="3" fill="none" stroke-linecap="round"/><ellipse cx="40" cy="50" rx="5" ry="4" fill="#1e3a8a"/><text x="56" y="24" font-size="13" font-weight="800" fill="#6d28d9">Zzz</text></svg>',
     hungry:'<svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="44" r="21" fill="#fff" stroke="#b93626" stroke-width="4"/><circle cx="40" cy="44" r="13" fill="#fef3c7" stroke="#d97706" stroke-width="2"/><path d="M15 22v40M11 22v12h8V22M65 22v40M65 22c5 4 5 14 0 18" stroke="#0f213d" stroke-width="3" fill="none" stroke-linecap="round"/></svg>',
-    honduras:'<svg viewBox="0 0 80 80" aria-hidden="true"><rect x="12" y="20" width="56" height="40" rx="6" fill="#fff" stroke="#0f213d" stroke-width="3"/><rect x="12" y="20" width="56" height="12" rx="3" fill="#1d4ed8"/><rect x="12" y="48" width="56" height="12" rx="3" fill="#1d4ed8"/><path d="M24 48l12-14 10 10 8-8 10 12z" fill="#047857"/></svg>',
+    hometown:'<svg viewBox="0 0 80 80" aria-hidden="true"><rect x="14" y="34" width="16" height="32" rx="2" fill="#1d4ed8"/><rect x="34" y="20" width="18" height="46" rx="2" fill="#0f213d"/><rect x="54" y="40" width="14" height="26" rx="2" fill="#047857"/><rect x="39" y="26" width="8" height="6" fill="#fef3c7"/><rect x="39" y="38" width="8" height="6" fill="#fef3c7"/></svg>',
     drawing:'<svg viewBox="0 0 80 80" aria-hidden="true"><path d="M40 16a24 24 0 1 0 22 32c3-6-3-10-8-10h-4c-4 0-6-4-4-8 2-5-2-14-6-14z" fill="#fde68a" stroke="#b45309" stroke-width="3"/><circle cx="28" cy="34" r="4" fill="#b93626"/><circle cx="26" cy="48" r="4" fill="#1d4ed8"/><circle cx="38" cy="54" r="4" fill="#047857"/><path d="M50 18l14 14-20 20-8 2 2-8z" fill="#6d28d9"/></svg>',
     owl:'<svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="42" r="22" fill="#78350f"/><ellipse cx="40" cy="48" rx="12" ry="12" fill="#fde68a"/><circle cx="32" cy="36" r="7" fill="#fff"/><circle cx="48" cy="36" r="7" fill="#fff"/><circle cx="32" cy="36" r="3" fill="#0f213d"/><circle cx="48" cy="36" r="3" fill="#0f213d"/><polygon points="40,39 37,44 43,44" fill="#f59e0b"/><path d="M58 14a8 8 0 1 0 8 8 6 6 0 0 1-8-8z" fill="#facc15"/></svg>',
     spiders:'<svg viewBox="0 0 80 80" aria-hidden="true"><line x1="40" y1="10" x2="40" y2="30" stroke="#64748b" stroke-width="2"/><circle cx="40" cy="44" r="11" fill="#0f213d"/><circle cx="40" cy="32" r="6" fill="#0f213d"/><circle cx="37" cy="31" r="1.5" fill="#fff"/><circle cx="43" cy="31" r="1.5" fill="#fff"/><path d="M30 38L16 28M30 44L14 44M30 50L16 60M50 38l14-10M50 44h16M50 50l14 10" stroke="#0f213d" stroke-width="3" stroke-linecap="round"/></svg>',
@@ -925,8 +925,8 @@ function s0(){
 ========================================================= */
 function s1(){
   var h = '<div class="card">';
-  h += slideHeader('Stage 2 • 5–14 min • Discovery', 'CEFR Reading & Noticing', 'Santa Bárbara Chat Mystery', 'slide1');
-  h += '<div class="between"><p class="sub" style="margin:0">Read aloud together: <strong>'+esc(p1())+' = Valeria</strong>, <strong>'+esc(p2())+' = Daniela</strong>. Tap any bubble to hear it.</p>'+
+  h += slideHeader('Stage 2 • 5–14 min • Discovery', 'CEFR Reading & Noticing', 'Weekend Chat Mystery', 'slide1');
+  h += '<div class="between"><p class="sub" style="margin:0">Read aloud together: <strong>'+esc(p1())+' = Speaker A</strong>, <strong>'+esc(p2())+' = Speaker B</strong>. Tap any bubble to hear it.</p>'+
     '<button type="button" class="chip compact'+(S.es?' on':'')+'" data-act="es" aria-pressed="'+(S.es?'true':'false')+'">Español: '+(S.es?'On':'Off')+'</button></div>';
 
   h += '<div class="chat-wrap">';
@@ -939,12 +939,12 @@ function s1(){
   h += '</div>';
 
   h += '<div class="qblock'+(S.gist==='no'?' solved':'')+'">';
-  h += '<div class="qtitle">Quick Check: Do Valeria and her sister like the exact same things?</div>';
+  h += '<div class="qtitle">Quick Check: Do Speaker A and her sister like the exact same things?</div>';
   h += '<div class="row">'+
     '<button type="button" class="opt'+(S.gist==='yes'?' bad':'')+'" data-act="gist" data-arg="yes">Yes, they like the same things</button>'+
-    '<button type="button" class="opt'+(S.gist==='no'?' good':'')+'" data-act="gist" data-arg="no">No! Valeria loves movies, her sister watches anime &amp; rock</button>'+
+    '<button type="button" class="opt'+(S.gist==='no'?' good':'')+'" data-act="gist" data-arg="no">No! Speaker A loves movies, her sister watches anime &amp; rock</button>'+
   '</div>';
-  if(S.gist==='yes') h += '<div class="hint-box">Check Valeria\'s line again: "I don\'t watch anime..." — try the other one!</div>';
+  if(S.gist==='yes') h += '<div class="hint-box">Check Speaker A\'s line again: "I don\'t watch anime..." — try the other one!</div>';
   h += '</div>';
 
   h += '<h3>Detective Puzzles: You Find the Rules!</h3>';
@@ -990,7 +990,7 @@ function shortAnswer(kind, sub){
     neg = 'No, '+who+' '+(third?"doesn't":"don't")+'.';
   } else if(who==='I'){ pos='Yes, I am.'; neg="No, I'm not."; }
   else if(who==='you'){ pos='Yes, you are.'; neg="No, you aren't."; }
-  else if(who==='she' || who==='he'){ pos='Yes, '+who+' is.'; neg='No, '+who+" isn't."; }
+  else if(who==='she' || who==='he'){ pos='Yes, '+who+' is.'; neg="No, '+who+" isn't."; }
   else { pos='Yes, they are.'; neg="No, they aren't."; }
   return pos+' / '+neg;
 }
@@ -1370,12 +1370,12 @@ function s4(){
 }
 
 /* =========================================================
-   STEP 5: SANTA BARBARA MINI-PODCAST (39 - 50 MIN)
+   STEP 5: MINI-PODCAST (39 - 50 MIN)
 ========================================================= */
 function s5(){
   var th = PODCAST_THEMES[S.podTopic];
   var h = '<div class="card">';
-  h += slideHeader('Stage 6 • 39–50 min • Fluency & Mediation', 'CEFR Spoken Production', 'Santa Bárbara Mini-Podcast', 'slide5');
+  h += slideHeader('Stage 6 • 39–50 min • Fluency & Mediation', 'CEFR Spoken Production', 'Real Talk Mini-Podcast', 'slide5');
 
   h += '<div class="row mt">'+
     [['prep','1. Pick Topic & Keywords (2m)'],['interview','2. Live Interview (5m)'],['report','3. Report Back! (4m)']].map(function(st){
@@ -1469,7 +1469,7 @@ function s5(){
    STEP 6: STARS, UPGRADES & MISSION (50 - 55 MIN)
 ========================================================= */
 function missionText(){
-  return 'BAA Voice Mission (Before Next Class):\n1) 1 thing you usually do on weekends + because...\n2) 1 thing your sister/mom/friend doesn\'t do or doesn\'t like.\n3) 1 "Do you...?" or "Are you...?" question for '+CONFIG.teacher+'!';
+  return 'Voice Mission (Before Next Class):\n1) 1 thing you usually do on weekends + because...\n2) 1 thing your sister/mom/friend doesn\'t do or doesn\'t like.\n3) 1 "Do you...?" or "Are you...?" question for '+CONFIG.teacher+'!';
 }
 function copyText(txt, cb){
   function fallback(){
